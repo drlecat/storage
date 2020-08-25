@@ -1,0 +1,481 @@
+@charset "utf-8";
+html,body{
+    width: 100%;
+}
+.about-con,.pro-con,.con_con,.team_con,#conus,.foot_con{
+    width: 1200px;
+    margin: 0 auto;
+}
+#nav .nav-con ul a:nth-of-type(1){
+    border-bottom: 6px solid #856961;
+    color: #856961;
+}
+
+/* banner */
+#banner{
+    position: relative;
+    overflow: hidden;
+}
+#banner .carousel{
+    overflow: hidden;
+    position: relative;
+}
+.carousel>.carousel_img{
+    width: 500%;
+    transition: all 1s;
+}
+.carousel>.carousel_img>img{
+    vertical-align: top;
+    width: 20%;
+    float: left;
+}
+.carousel button{
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(0,0,0,.5);
+    border: 2px solid rgb(130, 145, 160);
+    color: #fff;
+    cursor: pointer;
+    margin-top: -40px;
+    outline: none;
+    font-size: 30px;
+}
+.carousel button:nth-of-type(1){
+    left: 20px;
+}
+.carousel button:nth-of-type(2){
+    right: 20px;
+}
+.carousel button:hover{
+    background: rgba(130, 145, 160,1);
+}
+.carousel ul{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 100px;
+    margin-left: -50px;
+    text-align: center;
+}
+.carousel ul li{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    cursor: wait;
+}
+li.active{
+    background: red !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about */
+#about{
+    height: 913px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../images/about-bg_02.png) no-repeat top center;
+    position: relative;
+
+}
+.about-con{
+    height: 913px;
+    position: relative;
+}
+#about .about-con .show-box{
+    width: 400px;
+    height: 518px;
+    background: url(../images/about-show_03.png) no-repeat center;
+    position: absolute;
+    left: 77px;
+    top: 164px;
+}
+#about .about-con .show-border{
+    width: 400px;
+    height: 518px;
+    border: 1px solid #333;
+    position: absolute;
+    left: 62px;
+    top: 180px;
+}
+#about .about-con .aboutus-bg{
+    width: 252px;
+    height: 41px;
+    margin: 0 auto;
+    /* background: url(../images/aboutus-bg_03.png) no-repeat center; */
+    position: absolute;
+    top: 85px;
+    left: 475px;
+    z-index: 0;
+}
+#about .about-con h2{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+    padding-top: 50px;
+}
+#about .about-con p:nth-of-type(1){
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #666;
+    padding-top: 9px;
+    position: absolute;
+    top: 72px;
+    left: 570px;
+    z-index: 1;
+}
+#about .about-con .about-word{
+    width: 606px;
+    height: 500px;
+    position: absolute;
+    top: 179px;
+    left: 506px;
+}
+#about .about-con .about-word h3{
+    font-size:24px;
+    color: #3A3438;
+    margin-bottom: 54px;
+}
+#about .about-con .about-word span{
+    display: block;
+    text-indent: 2em;
+    font-size:14px;
+    color: #3A3438;
+    font-weight: 400;
+    line-height:30px;
+}
+#about .about-con .about-word span:nth-of-type(1){
+    width: 36px;
+    border-top: 1px solid #333;
+    margin-bottom: 28px;
+}
+#about .about-con .about-word span:nth-of-type(3){
+    margin-top: 8px;
+}
+#about img{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -960px;
+}
+
+/* 产品介绍 */
+#product{
+    height: 663px;
+    background: url(../images/about-bg_02.png) no-repeat center;
+}
+.pro-con{
+    height: 663px;
+    position: relative;
+}
+#product .pro-con .pro-bg{
+    width: 252px;
+    height: 41px;
+    margin: 0 auto;
+    position: absolute;
+    top: 85px;
+    left: 475px;
+    z-index: 0;
+}
+#product .pro-con h2{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+    padding-top: 50px;
+}
+#product .pro-con p:nth-of-type(1){
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #666;
+    padding-top: 9px;
+    position: absolute;
+    top: 72px;
+    left: 570px;
+    z-index: 1;
+}
+#product .pro-con .pro-show{
+    width: 1200px;
+    height: 500px;
+    position: absolute;
+    top: 163px;
+}
+#product .pro-con .pro-show a{
+    display: block;
+    width: 327px;
+    float: left;
+    margin:0 36px;
+    position: relative;
+}
+#product .pro-con .pro-show dt{
+    width: 327px;
+    height: 298px;
+    background: rgba(51,51,51,1);
+}
+#product .pro-con .pro-show dt em{
+    display: none;
+    width: 327px;
+    height: 298px;
+    background: url(../images/search.png) no-repeat center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#product .pro-con .pro-show a:hover dt em{
+    display: block;
+}
+#product .pro-con .pro-show dd h3{
+    font-size: 24px;
+    color: #666;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 13px;
+}
+#product .pro-con .pro-show dd span{
+    display: block;
+    width: 327px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    line-height: 24px;
+}
+#product .pro-con .pro-show dd i{
+    display: block;
+    width: 32px;
+    border-top: 1px solid #333;
+    margin:7px 0px 10px 145px;
+}
+#product .pro-con .pro-show a:hover dt img{
+    opacity: 0.5;
+}
+#product .pro-con .pro-show a:hover dd h3{
+    color: #333;
+}
+#product .pro-con .pro-show a:hover dd span{
+    color: #333;
+}
+#product .pro-con .pro-show a:hover dd i{
+    border-color: #333;
+}
+/* 产品介绍完 */
+
+
+
+/* 公司团队 */
+#team{
+    height: 783px;
+    background: url(../images/about-bg_02.png) no-repeat center;
+}
+#team .team_con{
+    height: 783px;
+    position: relative;
+}
+#team .team_con .team-bg{
+    width: 252px;
+    height: 41px;
+    margin: 0 auto;
+    position: absolute;
+    top: 85px;
+    left: 475px;
+    z-index: 0;
+}
+#team .team_con h2{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+    padding-top: 50px;
+}
+#team .team_con p:nth-of-type(1){
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #666;
+    padding-top: 9px;
+    position: absolute;
+    top: 72px;
+    left: 570px;
+    z-index: 1;
+}
+#team .team_con .team_show{
+    width: 1124px;
+    margin: 70px auto;
+    height: 508px;
+}
+#team .team_con .team_show a{
+    width: 245px;
+    margin: 0 18px;
+    float: left;
+}
+#team .team_con .team_show a .imgbox{
+    width:245px;
+    height:405px;
+    overflow: hidden;
+}
+#team .team_con .team_show a .imgbox img{
+    display: block;
+    width:245px;
+    height:405px;
+}
+#team .team_con .team_show a h3{
+    text-align: center;
+    font-size:20px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:20px;
+    padding-top: 29px;
+}
+#team .team_con .team_show a h4{
+    text-align: center;
+    font-size:16px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:16px;
+    padding-top: 12px;
+}
+#team .team_con .team_show a:hover h3{
+    padding-top: 10px;
+    color: #fff;
+}
+#team .team_con .team_show a:hover h4{
+    display: none;
+}
+#team .team_con .team_show a i{
+    display: none;
+    width: 28px;
+    border-top: 1px solid #fff;
+    text-align: center;
+    margin: 8px auto 0px;
+}
+.word_box{
+    width:245px;
+    height:103px;
+}
+.word_box span{
+    display: none;
+    width: 245px;
+    height:37px;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    line-height:24px;
+    text-align:center;
+}
+#team .team_con .team_show a:hover i{
+    display: block;
+}
+#team .team_con .team_show a:hover span{
+    display: block;
+}
+#team .team_con .team_show a:hover .imgbox img{
+    transform: scale(1.2);
+}
+#team .team_con .team_show a:hover .word_box{
+    background: #3c3c3c;
+}
+/* 公司团队完 */
+
+/* 联系我们 */
+#conus{
+    height: 545px;
+    position: relative;
+}
+#conus .con-bg{
+    width: 252px;
+    height: 41px;
+    margin: 0 auto;
+    position: absolute;
+    top: 85px;
+    left: 475px;
+    z-index: 0;
+}
+#conus .h2{
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #333;
+    padding-top: 50px;
+}
+#conus p:nth-of-type(1){
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: #666;
+    padding-top: 9px;
+    position: absolute;
+    top: 72px;
+    left: 570px;
+    z-index: 1;
+}
+.map{
+    width:662px;
+    height:344px;
+    position: absolute;
+    top: 150px;
+    left: 66px;
+}
+.connet_word{
+    width: 416px;
+    height: 344px;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+}
+.connet_word .word{
+    height: 114px;
+    background: url(../images/phone_03.png) no-repeat left top;
+}
+#conus .connet_word .word h2{
+    font-size:20px;
+    font-weight:400;
+    color:#333;
+    line-height:20px;
+    padding: 0;
+    padding-left: 58px;
+}
+#conus .connet_word .word h3{
+    font-size:14px;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    line-height:34px;
+    padding-left: 58px;
+}
+#conus .connet_word .word h4{
+    height:14px;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(51,51,51,1);
+    line-height:20px;
+    padding-left: 58px;
+}
+#conus .connet_word .word h5{
+    height:14px;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(153,153,153,1);
+    line-height:20px;
+    padding-top: 11px;
+    padding-left: 58px;
+}
+/* 联系我们完 */
+
+
+

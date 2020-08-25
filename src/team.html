@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/team.css">
+</head>
+<body>
+     <!-- 导航 -->
+     <nav id="nav">
+        <div class="nav-con">
+            <h1 id="logo"></h1>
+            <ul>
+                <a href="./index.html">首页</a>
+                <a href="#">关于我们</a>
+                <a href="./product.html">产品介绍</a>
+                <a href="#">我们团队</a>
+                <a href="./conectus.html">联系我们</a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div id="banner">
+        <div class="carousel">
+            <div class="carousel_img">
+                <img src="./images/about-us_02.png"/>
+                <img src="./images/about-us_02.png"/>
+                <img src="./images/about-us_02.png"/>
+                <img src="./images/about-us_02.png"/>
+                <img src="./images/about-us_02.png"/>
+            </div>
+            <button>&lt;</button>
+            <button>&gt;</button>
+            <ul>
+                <li dy="0" class="active"></li>
+                <li dy="1"></li>
+                <li dy="2"></li>
+                <li dy="3"></li>
+                <li dy="4"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var btns=document.getElementsByTagName("button");
+        var img=document.getElementsByClassName("carousel_img")[0];
+        var lis=document.getElementsByTagName("li");
+        var j=0
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick=function(){ 
+                if(this.innerHTML=="&gt;"){
+                     hh(1);
+                }else{
+                    hh(-1);
+                }          
+            }  
+        }
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                hh(undefined,this)
+            }
+        }
+
+
+
+        function hh(z,btn){
+            if(z){
+                j+=z 
+                if(j==5){
+                    j=0
+                }else if(j==-1){
+                    j=4
+                }    
+            }else{
+                j=parseInt(btn.getAttribute("dy"))
+            }
+                img.style.marginLeft=-100*parseInt(j)+"%";
+                for(var x=0;x<lis.length;x++){
+                lis[x].className=""
+                }
+                lis[j].className="active"   
+        }
+    </script>
+
+    <!-- 团队介绍 -->
+    <div id="team_int">
+        <div class="team_con">
+            <div class="team_nav">
+                <span></span>
+                <h2>团队介绍</h2>
+                <p>Team Introduction</p>
+                <div class="nav_word">
+                    <i>当前位置></i>
+                    <a href="./index.html">首页></a>
+                    <i>团队介绍</i>
+                </div>
+                
+            </div>
+            <img class="immg" src="./images/t_01_03.png" alt="" >
+            <img class="immg" src="./images/t_02_03.png" alt="" style="display: none;">
+            <img class="immg" src="./images/t_03_03.png" alt="" style="display: none;">
+            <img class="immg" src="./images/t_04_03.png" alt="" style="display: none;">
+
+
+            <div class="team_word">
+                <i>贾斯汀</i><em>-比伯</em>
+                <h4>DUZU 公司行动总裁</h4>
+                <p> 贾斯汀出生于1994年3月1日的加拿大安大略省伦敦的圣若瑟医院，并在安大略省的斯特拉特福成长。小贾的母亲怀孕时年仅17岁，而他的父母结婚10个月后就离婚， 因此他从小由自己的母亲、外公和外婆养大。</p>
+                <p>贾斯汀从小对曲棍球、足球和国际象棋感兴趣， 并一直追求自己的音乐梦想。 他从小自学了钢琴、鼓、吉他和小号。从五岁起他就无师自通，自学了钢琴、打鼓、 吉他和小号， 华横溢的比伯还非常热爱唱歌，他的歌声清脆而优美。早在2007年贾斯汀12岁时，在斯特拉特福德当地的歌唱比赛中演唱尼欧的歌曲《So Sick》并获得了比赛的第二名。</p>
+            </div>
+            <div class="team_word" style="display: none;">
+                <i>查理</i><em>-普斯</em>
+                <h4>DUZU 公司行动总裁</h4>
+                <p> 查理·普斯出生于美国新泽西州，他的母亲是一位钢琴老师。他4岁时就开始教他学习钢琴，10岁时开始学习爵士乐。</p>
+                <p>003年，12岁的他在父亲的支持下录制了一张圣诞音乐唱片并挨家挨户售卖给邻居们，赚取的600美元捐赠给了当地教堂；高中时期，他每周六去往隔壁的纽约曼哈顿音乐学校学习古典爵士。</p>
+            </div>
+            <div class="team_word" style="display: none;">
+                <i>艾薇儿</i><em>-拉维尼</em>
+                <h4>DUZU 公司行动总裁</h4>
+                <p> 艾薇儿·拉维尼（Avril Ramona Lavigne），1984年9月27日出生于加拿大安大略省贝尔维尔，加拿大女歌手、词曲作者、演员，拥有加拿大、法国双国籍。</p>
+                <p>5岁时，艾薇儿随家人迁居到安大略省的纳帕尼小镇，并进入教堂的唱诗班学习声乐和钢琴。在学校里，艾薇儿是个“假小子”，经常因为与其它学生打架而被赶出教室 [16]  。7年级时，艾薇儿与加拿大摇滚女歌手艾拉妮丝·莫莉塞特在洛杉矶进行了同台表演 [17]  。12岁时，父亲给她买了一把吉他。从此，她开始到社区剧院为他人演唱自己写的歌。</p>
+            </div>
+            <div class="team_word" style="display: none;">
+                <i>泰勒</i><em>-斯威夫特</em>
+                <h4>DUZU 公司行动总裁</h4>
+                <p> 泰勒·斯威夫特（Taylor Swift），1989年12月13日出生于美国宾夕法尼亚州，美国女歌手、词曲作者、音乐制作人、演员、慈善家。2006年发行首张录音室专辑《泰勒·斯威夫特》，获美国唱片业协会认证5倍白金唱片。</p>
+                <p>泰勒·斯威夫特于1989年12月13日出生于美国宾夕法尼亚州雷丁，童年时期在宾夕法尼亚州蒙哥马利县一个11英亩的圣诞树农场度过，在艾尔弗尼亚蒙特梭利教育学校上幼儿园。</p>
+            </div>
+            <div class="choose">
+                <section class="0">
+                    <img src="./images/t_01_03.png" alt="">
+                    <div class="choose_word">
+                        <h5>贾斯汀·比伯</h5>
+                        <h6>DUZU公司总裁</h6>
+                    </div>
+                </section>
+                <section class="1">
+                    <img src="./images/t_02_03.png" alt="">
+                    <div class="choose_word">
+                        <h5>查理·普斯</h5>
+                        <h6>Charlie Puth</h6>
+                    </div>
+                </section>
+                <section class="2">
+                    <img src="./images/t_03_03.png" alt="">
+                    <div class="choose_word">
+                        <h5>艾薇儿·拉维尼</h5>
+                        <h6>Avril Lavigne</h6>
+                    </div>
+                </section>
+                <section class="3">
+                    <img src="./images/t_04_03.png" alt="">
+                    <div class="choose_word">
+                        <h5>泰勒·斯威夫特</h5>
+                        <h6>Taylor Swift</h6>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- 选项卡 -->
+    <script>
+        var peple=document.getElementsByClassName("immg");
+        var word=document.getElementsByClassName("team_word");
+        var btns=document.getElementsByTagName("section");
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick=function(){
+                for(var j=0;j<btns.length;j++){
+                    peple[j].style.display="none";
+                    word[j].style.display="none";
+                }
+                var x=this.className
+                peple[x].style.display="block";
+                word[x].style.display="block";
+            }
+        }   
+    </script>
+    <!-- 选项卡 -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="foot_con">
+            <p>COPYRIGHT © 重庆duzu有限公司 | duzu备案号 33010602001878 号 版权所有：重庆戈登有限公司</p>
+            <img src="./images/log_02.png" alt="">
+        </div>
+    </footer>
+</body>
+</html>

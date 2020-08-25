@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+     <!-- 导航 -->
+     <nav id="nav">
+        <div class="nav-con">
+            <h1 id="logo"></h1>
+            <ul>
+                <a href="./index.html">首页</a>
+                <a href="#">关于我们</a>
+                <a href="#">产品介绍</a>
+                <a href="./team.html">我们团队</a>
+                <a href="./conectus.html">联系我们</a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- banner -->
+    <div id="banner">
+        <div class="carousel">
+            <div class="carousel_img">
+                <img src="./images/6.jpg"/>
+                <img src="./images/7.jpg"/>
+                <img src="./images/8.jpg"/>
+                <img src="./images/9.jpg"/>
+                <img src="./images/0.jpg"/>
+            </div>
+            <button>&lt;</button>
+            <button>&gt;</button>
+            <ul>
+                <li dy="0" class="active"></li>
+                <li dy="1"></li>
+                <li dy="2"></li>
+                <li dy="3"></li>
+                <li dy="4"></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var btns=document.getElementsByTagName("button");
+        var img=document.getElementsByClassName("carousel_img")[0];
+        var lis=document.getElementsByTagName("li");
+        var j=0
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick=function(){ 
+                if(this.innerHTML=="&gt;"){
+                     hh(1);
+                }else{
+                    hh(-1);
+                }          
+            }  
+        }
+        for(var i=0;i<lis.length;i++){
+            lis[i].onclick=function(){
+                hh(undefined,this)
+            }
+        }
+
+
+
+        function hh(z,btn){
+            if(z){
+                j+=z 
+                if(j==5){
+                    j=0
+                }else if(j==-1){
+                    j=4
+                }    
+            }else{
+                j=parseInt(btn.getAttribute("dy"))
+            }
+                img.style.marginLeft=-100*parseInt(j)+"%";
+                for(var x=0;x<lis.length;x++){
+                lis[x].className=""
+                }
+                lis[j].className="active"   
+        }
+    </script>
+    <!-- banner完 -->
+
+
+    <!-- 团队介绍 -->
+    <div id="team_int">
+        <div class="team_con">
+            <div class="team_nav">
+                <div le="0" class="pro_check">
+                    <span></span>
+                    <h2>卡布基诺</h2>
+                    <p>Cappuccino</p>
+                </div>
+                <div le="1" class="pro_check">
+                    <span></span>
+                    <h2>拿铁咖啡</h2>
+                    <p>Latte Cafe</p>
+                </div>
+                <div le="2" class="pro_check">
+                    <span></span>
+                    <h2>摩卡咖啡</h2>
+                    <p>Mocca Cafe</p>
+                </div>
+                
+                <div class="nav_word">
+                    <i>当前位置></i>
+                    <a href="./index.html">首页></a>
+                    <i>产品介绍</i>
+                </div>
+                
+            </div>
+            <img class="immg" src="./images/pro_02_03.png" alt="" >
+            <img class="immg" src="./images/pro_03_03.png" alt="" style="display: none;">
+            <img class="immg" src="./images/pro_04_03.png" alt="" style="display: none;">
+
+
+            <div class="team_word">
+                <p> 
+                    卡布奇诺咖啡的味道很好，但它的名称来历却更有学问，一直是欧美研究文字变迁的最佳体材。 Cappuccino此字的历史，足以说明一个字常常会因为看来像某样东西，  最后被引申成其它字义， 远远超出造字者原先用意听来似乎蛮复杂的。创设于一五二五年以后的圣芳济教会Capuchin)的修士都穿著褐色道袍，头戴一顶尖尖帽子，圣芳济教会传到意大利时,  当地人觉得修士服饰很特殊，就给他们取个Cappuccino的名字， 此字的意大利文是指僧侣所穿宽松长袍和小尖帽，源自意大利文"头巾"即Cappuccino。</p>
+                <p>然而，老人爱喝咖啡，发觉浓缩咖啡、牛奶和奶泡混合后，颜色就像是修士所穿的深褐色道袍，于是灵机一动，就给牛奶加咖啡又有尖尖奶泡的饮料，取名为卡布奇诺(Cappuccino). 英文最早使用此字的时间在一九四八年当时旧金山一篇报导率先介绍卡布奇诺饮料，一直到1990年以后, 才成为世人耳熟能详的咖啡饮料。应该可以这么说Cappuccino咖啡这个字， 源自圣芳济教会(Capuchin)和意大利文头巾(Cappucio)，相信Cappuccino的原始造字者，做梦也没料到僧侣的道袍最后会变成一种咖啡饮料名称。卡布奇诺咖啡是意大利咖啡的一种变化，即在偏浓的咖啡上。</p>
+            </div>
+            <div class="team_word" style="display: none;">
+                <p> 其实，拿铁（Latte）在意大利语里是“牛奶”的意思，如果你点一杯“拿铁”，那么服务生只会给你上一杯牛奶。而意大利语的Caffè Latte指的才是拿铁。现在很多冷饮店都会推出自己的“拿铁”系列，像“红茶拿铁”“抹茶拿铁”等等，其实就是奶茶而并没有咖啡的成分。</p>
+                <p>拿铁咖啡是意大利浓缩咖啡(Espresso)与牛奶的经典混合，意大利人也很喜欢把拿铁作为早餐的饮料。意大利人早晨的厨房里，照得到阳光的炉子上通常会同时煮着咖啡和牛奶。喝拿铁的意大利人，与其说他们喜欢意大利浓缩咖啡，不如说他们喜欢牛奶，也只有Espresso才能给普普通通的牛奶带来让人难以忘怀的味道。</p>
+            </div>
+            <div class="team_word" style="display: none;">
+                <p> 摩卡咖啡其历史要追溯到咖啡的起源。它是由意大利浓缩咖啡、巧克力酱、鲜奶油和牛奶混合而成，摩卡得名于有名的摩卡港。十五世纪，整个中东非咖啡国家向外运输业不兴盛，也门摩卡是当时红海附近主要输出一个商港，当时咖啡主要是集中到摩卡港再向外输出的非洲咖啡，都被统称摩卡咖啡。而新兴的港口虽然代替了摩卡港的地位，但是摩卡港时期摩卡咖啡的产地依然保留了下来，这些产地所产的咖啡豆，仍被称为摩卡咖啡豆。</p>
+                <p>巧克力通常会以巧克力糖浆的形式添加，但某些咖啡售卖系统便会以即溶巧克力粉取代。有时，打起了的奶油、可可粉，和棉花糖都会加在上面用来加重咖啡的香味和作为装饰之用。 和意式卡布奇诺(Cappuccino) 不一样，摩卡咖啡上面是没有鲜奶泡沫的。取而代之，摩卡咖啡上面通常是一些打起了的奶油和肉桂粉或者可可粉其中之一。也有可能加入葵蜜饯粉在表面作为装饰并且增加风味。</p>
+            </div>          
+        </div>
+    </div>
+    <!-- 选项卡 -->
+    <script>
+        var cafe=document.getElementsByClassName("immg");
+        var word=document.getElementsByClassName("team_word");
+        var btns=document.getElementsByClassName("pro_check");
+        for(var i=0;i<btns.length;i++){
+            btns[i].onclick=function(){
+                for(var j=0;j<btns.length;j++){
+                    cafe[j].style.display="none";
+                    word[j].style.display="none";
+                }
+                var x=this.getAttribute("le")
+                cafe[x].style.display="block";
+                word[x].style.display="block";
+            }
+        }   
+    </script>
+    <!-- 选项卡 -->
+
+    <!-- footer -->
+    <footer id="footer">
+        <div class="foot_con">
+            <p>COPYRIGHT © 重庆duzu有限公司 | duzu备案号 33010602001878 号 版权所有：重庆戈登有限公司</p>
+            <img src="./images/log_02.png" alt="">
+        </div>
+    </footer>
+</body>
+</html>
